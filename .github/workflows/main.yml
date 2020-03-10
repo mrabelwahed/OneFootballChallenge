@@ -1,6 +1,11 @@
 name: Build Submission
 
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - 'master'
+      - 'base'
+      
 
 jobs:
   build:
