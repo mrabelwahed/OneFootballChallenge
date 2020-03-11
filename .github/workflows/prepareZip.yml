@@ -51,3 +51,13 @@ jobs:
         with:
           name: android-code-challenge-submissions
           path: ../artifact
+
+  ktlint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "checkout"
+        uses: actions/checkout@v2
+
+      - name: "ktlint"
+        uses: "vroy/gha-kotlin-linter@v1"

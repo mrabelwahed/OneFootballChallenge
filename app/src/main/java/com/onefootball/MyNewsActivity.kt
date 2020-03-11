@@ -19,7 +19,7 @@ import java.nio.charset.Charset
 
 class MyNewsActivity : AppCompatActivity() {
 
-    var jsonString : String? = null
+    var jsonString: String? = null
     lateinit var recyclerView: RecyclerView
     lateinit var myAdapter: NewsAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,8 +50,7 @@ class MyNewsActivity : AppCompatActivity() {
         val mainObject = JSONObject(jsonString)
         val newsItems = mutableListOf<News>()
         val newsArray = mainObject.getJSONArray("news")
-        newsArray.forEach {
-            newsObject ->
+        newsArray.forEach { newsObject ->
             val title = newsObject.getString("title")
             val imageURL = newsObject.getString("image_url")
             val resourceName = newsObject.getString("resource_name")
@@ -64,8 +63,7 @@ class MyNewsActivity : AppCompatActivity() {
     }
 }
 
-
-class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     private val newsItems = ArrayList<News>()
 
@@ -85,7 +83,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         holder.resourceName.text = news.resourceName
         holder.itemView.setOnClickListener {
             it.context.startActivity(
-                Intent(Intent.ACTION_VIEW, Uri.parse(news.newsLink))
+                    Intent(Intent.ACTION_VIEW, Uri.parse(news.newsLink))
             )
         }
     }
@@ -96,7 +94,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         notifyDataSetChanged()
     }
 
-    class NewsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var titleView: TextView = itemView.findViewById(R.id.news_title)
         var newsView: ImageView = itemView.findViewById(R.id.news_view)
@@ -104,7 +102,6 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         var resourceName: TextView = itemView.findViewById(R.id.resource_name)
     }
 }
-
 
 fun JSONArray.forEach(jsonObject: (JSONObject) -> Unit) {
     for (index in 0 until this.length()) jsonObject(this[index] as JSONObject)
