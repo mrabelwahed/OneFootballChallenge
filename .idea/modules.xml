@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OnefootballCodingChallenge.iml" filepath="$PROJECT_DIR$/OnefootballCodingChallenge.iml" group="OnefootballCodingChallenge" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OnefootballCodingChallenge-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OnefootballCodingChallenge-app.iml" group="OnefootballCodingChallenge/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OnefootballCodingChallenge_buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/OnefootballCodingChallenge_buildSrc.iml" group="OnefootballCodingChallenge/OnefootballCodingChallenge_buildSrc" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
