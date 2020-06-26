@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OnefootballCodingChallenge.iml" filepath="$PROJECT_DIR$/OnefootballCodingChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OnefootballCodingChallenge.iml" filepath="$PROJECT_DIR$/OnefootballCodingChallenge.iml" group="OnefootballCodingChallenge" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OnefootballCodingChallenge-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OnefootballCodingChallenge-app.iml" group="OnefootballCodingChallenge/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
