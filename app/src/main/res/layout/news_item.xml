@@ -17,14 +17,14 @@
         android:paddingBottom="8dp">
 
         <ImageView
-            android:id="@+id/news_view"
+            android:id="@+id/newsView"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:contentDescription="News Image"
             android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/news_title"
+            android:id="@+id/titleView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -37,7 +37,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/resource_icon"
+                android:id="@+id/resourceImage"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginStart="8dp"
@@ -45,7 +45,7 @@
                 android:contentDescription="Resource Icon" />
 
             <TextView
-                android:id="@+id/resource_name"
+                android:id="@+id/resourceName"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"

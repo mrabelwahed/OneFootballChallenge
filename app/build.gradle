@@ -64,4 +64,8 @@ dependencies {
     androidTestImplementation TestLibs.rules
     androidTestImplementation TestLibs.truth
     androidTestImplementation TestLibs.junitExt
+
+    // other modules
+    implementation(project(":data"))
+    implementation(project(":domain"))
 }
