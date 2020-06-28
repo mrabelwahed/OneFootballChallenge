@@ -25,10 +25,8 @@ class MyNewsActivity : AppCompatActivity(), OnClickListener{
 
     @Inject
     lateinit var newsAdapter: NewsAdapter
-
     @Inject
     lateinit var linearLayoutManager: LinearLayoutManager
-
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
     private lateinit var newsViewModel: NewsViewModel

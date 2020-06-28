@@ -11,7 +11,7 @@ android {
         targetSdkVersion Android.targetSDK
         versionCode Android.versionCode
         versionName Android.versionName
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'com.onefootball.UIRunner'
     }
     buildTypes {
         release {
@@ -26,6 +26,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    sourceSets{
+        androidTest{
+            java.srcDirs  +="$projectDir/src/sharedTest/java"
+        }
+        test{
+            java.srcDirs  +="$projectDir/src/sharedTest/java"
+        }
+    }
+
 }
 
 dependencies {
@@ -59,6 +69,7 @@ dependencies {
     androidTestImplementation TestLibs.mockitoAndroid
     androidTestImplementation TestLibs.espressoCore
     androidTestImplementation TestLibs.espressoContrib
+    androidTestImplementation TestLibs.espressoIntents
     implementation TestLibs.espressoIdlingResource
     testImplementation TestLibs.archCoreTesting
     androidTestImplementation TestLibs.rules

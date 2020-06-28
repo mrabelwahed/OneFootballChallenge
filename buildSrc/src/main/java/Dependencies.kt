@@ -76,6 +76,7 @@ object TestLibs {
     val junit = "junit:junit:4.12"
     val espressoCore = "androidx.test.espresso:espresso-core:${Versions.ESPRESSO_VERSION}"
     val espressoContrib = "androidx.test.espresso:espresso-contrib:${Versions.ESPRESSO_VERSION}"
+    val espressoIntents = "androidx.test.espresso:espresso-intents:${Versions.ESPRESSO_VERSION}"
     val espressoIdlingResource =
         "androidx.test.espresso:espresso-idling-resource:${Versions.ESPRESSO_VERSION}"
     val archCoreTesting = "androidx.arch.core:core-testing:${Versions.ARCH_CORE_TESTING_VER}"

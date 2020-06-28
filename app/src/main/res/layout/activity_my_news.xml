@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
     tools:context=".ui.features.News.view.MyNewsActivity">
 
     <androidx.recyclerview.widget.RecyclerView
