@@ -12,7 +12,7 @@ import java.nio.charset.Charset
 class NewsRepositoryImpl(val app: Application) : NewsRepository {
 
     override fun getNews(): Flowable<List<News>> {
-        var inputStream = app.assets.open("news.json")
+        val inputStream = app.assets.open("news.json")
         val size = inputStream.available()
         val buffer = ByteArray(size)
         inputStream.read(buffer)

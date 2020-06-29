@@ -12,15 +12,15 @@ import java.net.UnknownHostException
 import javax.inject.Inject
 
 class NewsViewModel @Inject constructor(private val usecase: GetNewsList) : ViewModel() {
-    val compositeDisposable = CompositeDisposable()
+    private val compositeDisposable = CompositeDisposable()
     val uiState = MutableLiveData<ViewState>()
     val liveUIState: LiveData<ViewState>
         get() = uiState
 
     fun getNewsList() {
         compositeDisposable.add(usecase.execute(Unit).subscribe(
-            { res -> uiState.value = ViewState.Success(NewsMapper.transform(res))},
-            { error ->uiState.value = setFailure(error) }
+            { res -> uiState.value = ViewState.Success(NewsMapper.transform(res)) },
+            { error -> uiState.value = setFailure(error) }
         ))
     }
 

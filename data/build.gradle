@@ -16,7 +16,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation Libs.kotlinStdLib
     implementation Libs.coreExt
-    implementation  Libs.appCompat
+    implementation Libs.appCompat
     implementation Libs.rxVersion
     implementation Libs.rxAndroid
     implementation(project(":domain"))

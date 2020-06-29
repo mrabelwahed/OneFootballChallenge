@@ -21,12 +21,14 @@ import com.onefootball.ui.features.News.viewmodel.NewsViewModel
 import kotlinx.android.synthetic.main.activity_my_news.*
 import javax.inject.Inject
 
-class MyNewsActivity : AppCompatActivity(), OnClickListener{
+class MyNewsActivity : AppCompatActivity(), OnClickListener {
 
     @Inject
     lateinit var newsAdapter: NewsAdapter
+
     @Inject
     lateinit var linearLayoutManager: LinearLayoutManager
+
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
     private lateinit var newsViewModel: NewsViewModel
@@ -103,7 +105,12 @@ class MyNewsActivity : AppCompatActivity(), OnClickListener{
     }
 
     override fun onClick(position: Int, view: View) {
-       startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(newsAdapter.newsItems[position].newsLink)))
+        startActivity(
+            Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse(newsAdapter.newsItems[position].newsLink)
+            )
+        )
     }
 }
 

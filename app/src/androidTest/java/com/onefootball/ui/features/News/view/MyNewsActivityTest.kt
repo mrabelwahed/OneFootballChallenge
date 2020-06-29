@@ -34,12 +34,12 @@ class MyNewsActivityTest {
     }
 
     @Test
-    fun should_scroll_to_the_end_of_news_list(){
+    fun should_scroll_to_the_end_of_news_list() {
         news {
             checkNewsListDisplayed()
-            val newsCount =  intentsTestRule.activity.newsAdapter.newsItems.size
-            scrollTo(newsCount-1)
-            clickNewsItem(newsCount-1)
+            val newsCount = intentsTestRule.activity.newsAdapter.newsItems.size
+            scrollTo(newsCount - 1)
+            clickNewsItem(newsCount - 1)
             val receivedIntent: Intent = Iterables.getOnlyElement(Intents.getIntents())
             assertThat(receivedIntent).hasAction(Intent.ACTION_VIEW)
         }

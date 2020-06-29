@@ -4,13 +4,10 @@ import android.app.Application
 import com.onefootball.di.component.AppComponent
 import com.onefootball.di.component.DaggerAppComponent
 import com.onefootball.di.module.AppModule
-import com.onefootball.di.module.GetNewsListModule
-import com.onefootball.di.module.NewsActivityModule
-import com.onefootball.di.module.NewsRepositoryModule
 
 open class App : Application() {
 
-    lateinit var appComponent: AppComponent
+    private lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()

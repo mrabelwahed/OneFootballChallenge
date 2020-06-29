@@ -1,37 +1,34 @@
-
 object Versions {
-    val KOTLIN = "1.3.41"
-    val COMPILE_SDK = 28
-    val MIN_SDK_VERSION = 21
-    val TARGET_SDK_VERSION = 28
-    val VERSION_CODE = 1
-    val VERSION_NAME = "1.0"
-    val RXJAVA_VERSION = "2.2.13"
-    val RX_ANDROID = "2.1.1"
-    val RX_RETROFIT_ADAPTER = "2.6.1"
-    val DAGGER_VERSION = "2.22"
-    val DAGGER_COMPILER = "2.22"
-    val RETROFIT_VERSION = "2.7.1"
-    val GSON_VERSION = "2.8.5"
-    val GSON_CONVERTER = "2.6.1"
-    val OKHTTP_LOGGING_INTERCEPTOR_VERSION = "3.12.1"
-    val LIFE_CYCLE_VERSION = "2.2.0"
-    val CARD_VIEW_VERSION = "1.0.0"
-    val RECYCLERVIEW_VERSION = "1.0.0"
-    val CONSTRAINT_LAYOUT = "1.1.3"
-    val ANDROID_GRADLE_VERSION = "3.5.0"
-    val ESPRESSO_VERSION = "3.1.1"
-    val APP_COMPAT_VERSION = "1.1.0"
-    val CORE_KTX = "1.1.0"
-    val ARCH_CORE_TESTING_VER = "2.0.0"
-    val TEST_RUNNER_VER = "1.1.1"
-    val RULES_VER = "1.1.1"
-    val TRUTH_VER = "1.1.0"
-    val JUNIT_EXT_VER = "1.1.0"
-    val MATERIAL_VERSION = "1.0.0"
-    val MOCKITO = "3.3.1"
-    val RX_IDLER = "0.10.0"
-    val COIL_VER ="0.6.1"
+    const val KOTLIN = "1.3.41"
+    const val COMPILE_SDK = 28
+    const val MIN_SDK_VERSION = 21
+    const val TARGET_SDK_VERSION = 28
+    const val VERSION_CODE = 1
+    const val VERSION_NAME = "1.0"
+    const val RXJAVA_VERSION = "2.2.13"
+    const val RX_ANDROID = "2.1.1"
+    const val RX_RETROFIT_ADAPTER = "2.6.1"
+    const val DAGGER_VERSION = "2.22"
+    const val DAGGER_COMPILER = "2.22"
+    const val RETROFIT_VERSION = "2.7.1"
+    const val GSON_VERSION = "2.8.5"
+    const val OKHTTP_LOGGING_INTERCEPTOR_VERSION = "3.12.1"
+    const val LIFE_CYCLE_VERSION = "2.2.0"
+    const val CARD_VIEW_VERSION = "1.0.0"
+    const val RECYCLERVIEW_VERSION = "1.0.0"
+    const val CONSTRAINT_LAYOUT = "1.1.3"
+    const val ANDROID_GRADLE_VERSION = "3.5.0"
+    const val ESPRESSO_VERSION = "3.1.1"
+    const val APP_COMPAT_VERSION = "1.1.0"
+    const val CORE_KTX = "1.1.0"
+    const val ARCH_CORE_TESTING_VER = "2.0.0"
+    const val TEST_RUNNER_VER = "1.1.1"
+    const val RULES_VER = "1.1.1"
+    const val TRUTH_VER = "1.1.0"
+    const val JUNIT_EXT_VER = "1.1.0"
+    const val MOCKITO = "3.3.1"
+    const val RX_IDLER = "0.10.0"
+    const val COIL_VER = "0.6.1"
 }
 
 object BuildPlugins {
@@ -52,14 +49,8 @@ object Libs {
     val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.KOTLIN}"
     val rxVersion = "io.reactivex.rxjava2:rxjava:${Versions.RXJAVA_VERSION}"
     val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.RX_ANDROID}"
-    val rxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.RX_RETROFIT_ADAPTER}"
-    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT_VERSION}"
-    val material = "com.google.android.material:material:${Versions.MATERIAL_VERSION}"
-    val gson = "com.google.code.gson:gson:${Versions.GSON_VERSION}"
     val dagger = "com.google.dagger:dagger:${Versions.DAGGER_VERSION}"
     val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.DAGGER_COMPILER}"
-    val loggingInterceptor =
-        "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP_LOGGING_INTERCEPTOR_VERSION}"
     val recyclerview = "androidx.recyclerview:recyclerview:${Versions.RECYCLERVIEW_VERSION}"
     val cardview = "androidx.cardview:cardview:${Versions.CARD_VIEW_VERSION}"
     val constraintLayout =

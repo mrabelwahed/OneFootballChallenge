@@ -10,7 +10,8 @@ import com.ramadan.domain.repository.NewsRepository
 import com.ramadan.test_utils.RxSchedulerRule
 import com.ramadan.test_utils.mock
 import io.reactivex.Flowable
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -21,14 +22,14 @@ import org.mockito.Mockito.*
 import org.mockito.junit.MockitoJUnit
 import java.net.UnknownHostException
 
-class NewsViewModelTest{
+class NewsViewModelTest {
     @Rule
     @JvmField
     var mockitoRule = MockitoJUnit.rule()!!
 
     private lateinit var newsViewModel: NewsViewModel
 
-    lateinit var getNewsList: GetNewsList
+    private lateinit var getNewsList: GetNewsList
 
     @Mock
     var observer: Observer<ViewState> = mock()
@@ -99,9 +100,8 @@ class NewsViewModelTest{
     }
 
 
-
     private fun createNewsList(): List<News> {
-        return listOf<News>(
+        return listOf(
             News(
                 "The 5 players who could be the next Messi or Ronaldo",
                 "https://image-service.onefootball.com/crop/face?h=810&amp;image=https%3A%2F%2Fwp-images.onefootball.com%2Fwp-content%2Fuploads%2Fsites%2F10%2F2019%2F08%2FFIFA-Ballon-dOr-Gala-2014-1566312341-1024x683.jpg&amp;q=25&amp;w=1080",
@@ -109,7 +109,7 @@ class NewsViewModelTest{
                 "https://images.onefootball.com/blogs_logos/circle_onefootball.png",
                 "https://onefootball.com/en/news/the-5-players-who-could-be-the-next-messi-or-ronaldo-en-26880141?variable=20190822"
             ),
-         News(
+            News(
                 "How will Juventus line up this season?",
                 "https://oneftbl-cms.imgix.net/https%3A%2F%2Fwp-images.onefootball.com%2Fwp-content%2Fuploads%2Fsites%2F10%2F2019%2F08%2FFBL-ICC-2019-MADRID-JUVENTUS-1566054314-1024x768.jpg?crop=faces&fit=crop&h=810&q=25&w=1080&s=eecf0b15917c1c4af6bc16ecb63ccc1e",
                 "Onefootball",

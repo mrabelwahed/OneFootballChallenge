@@ -20,7 +20,7 @@ class GetNewsListTest {
     @Rule
     @JvmField
     var mockitoRule = MockitoJUnit.rule()!!
-    lateinit var getNewsList: GetNewsList
+    private lateinit var getNewsList: GetNewsList
 
     @Mock
     lateinit var newsRepo: NewsRepository
@@ -30,7 +30,7 @@ class GetNewsListTest {
     var testSchedulerRule: RxSchedulerRule =
         RxSchedulerRule()
 
-    val testSubscriber = TestSubscriber<List<News>>()
+    private val testSubscriber = TestSubscriber<List<News>>()
 
     @Before
     fun setup() {
@@ -45,7 +45,7 @@ class GetNewsListTest {
     @Test
     fun `should get news when getNews called`() {
         //given
-        val newsList = listOf<News>(
+        val newsList = listOf(
             News(
                 "The 5 players who could be the next Messi or Ronaldo",
                 "https://image-service.onefootball.com/crop/face?h=810&amp;image=https%3A%2F%2Fwp-images.onefootball.com%2Fwp-content%2Fuploads%2Fsites%2F10%2F2019%2F08%2FFIFA-Ballon-dOr-Gala-2014-1566312341-1024x683.jpg&amp;q=25&amp;w=1080",
@@ -73,6 +73,6 @@ class GetNewsListTest {
         getNewsList.execute(Unit).subscribe(testSubscriber)
         //then
         testSubscriber.assertNoErrors().assertComplete()
-        assertEquals("news list should have three news items",testSubscriber.values()[0].size,3)
+        assertEquals("news list should have three news items", testSubscriber.values()[0].size, 3)
     }
 }

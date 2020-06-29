@@ -21,8 +21,8 @@ dependencies {
     implementation Libs.kotlinStdLib
     implementation Libs.coreExt
     implementation Libs.appCompat
-    implementation  TestLibs.junit
-    implementation  TestLibs.mockito
+    implementation TestLibs.junit
+    implementation TestLibs.mockito
     implementation Libs.rxVersion
     implementation Libs.rxAndroid
 

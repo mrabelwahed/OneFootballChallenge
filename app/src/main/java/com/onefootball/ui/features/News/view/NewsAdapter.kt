@@ -1,7 +1,5 @@
 package com.onefootball.ui.features.News.view
 
-import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,7 +27,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         holder.itemView.newsView.load(url = news.imageURL)
         holder.itemView.resourceImage.load(url = news.resourceURL)
         holder.itemView.resourceName.text = news.resourceName
-        holder.itemView.setOnClickListener { listener.onClick(position,it) }
+        holder.itemView.setOnClickListener { listener.onClick(position, it) }
     }
 
     fun setNewsItems(newListOfNewsItems: List<News>) {

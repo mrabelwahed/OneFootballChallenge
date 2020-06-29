@@ -39,3 +39,16 @@ code challenge to you.
 ![](https://media.giphy.com/media/uADx98ByhpOwcE7KhW/giphy.gif)
 
 :rocket: Have fun!
+
+##My Solution
+- please check the solution here [branch task/refactor]
+
+- I used clean architecture from Uncle Bob 
+- I used multi module approach to implement the clean architecture
+- I used Kotlin DSL with BuildSrc folder for better dependency management
+- I used Espresso UI testing with Robot Pattern
+- I added unit testing with shared module for testing utils and junit rules
+- I added adaptive icon for the task just for fun 
+- I used RxJava for Reactive Programming
+- I used Dagger for dependency Injection
+- I used Junit and Mockito for unit testing
