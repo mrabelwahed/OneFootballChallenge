@@ -26,16 +26,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    sourceSets{
-        androidTest{
-            java.srcDirs  +="$projectDir/src/sharedTest/java"
-        }
-        test{
-            java.srcDirs  +="$projectDir/src/sharedTest/java"
-        }
-    }
-
 }
 
 dependencies {
@@ -52,8 +42,6 @@ dependencies {
     kapt Libs.daggerCompiler
     implementation Libs.viewModel
     implementation Libs.liveData
-    implementation Libs.gson
-    implementation Libs.gsonConverter
     implementation Libs.rxVersion
     implementation Libs.rxAndroid
 
@@ -79,4 +67,5 @@ dependencies {
     // other modules
     implementation(project(":data"))
     implementation(project(":domain"))
+    testImplementation(project(":test-utils"))
 }

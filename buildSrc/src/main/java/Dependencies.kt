@@ -56,7 +56,6 @@ object Libs {
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT_VERSION}"
     val material = "com.google.android.material:material:${Versions.MATERIAL_VERSION}"
     val gson = "com.google.code.gson:gson:${Versions.GSON_VERSION}"
-    val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.GSON_CONVERTER}"
     val dagger = "com.google.dagger:dagger:${Versions.DAGGER_VERSION}"
     val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.DAGGER_COMPILER}"
     val loggingInterceptor =

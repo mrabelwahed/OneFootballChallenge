@@ -8,7 +8,6 @@ import com.onefootball.state.ViewState
 import com.onefootball.ui.features.News.mapper.NewsMapper
 import com.ramadan.domain.interactor.GetNewsList
 import io.reactivex.disposables.CompositeDisposable
-import retrofit2.HttpException
 import java.net.UnknownHostException
 import javax.inject.Inject
 
@@ -28,7 +27,6 @@ class NewsViewModel @Inject constructor(private val usecase: GetNewsList) : View
     private fun setFailure(throwable: Throwable): ViewState {
         return when (throwable) {
             is UnknownHostException -> ViewState.Error(Failure.NetworkConnection)
-            is HttpException -> ViewState.Error(Failure.ServerError)
             else -> ViewState.Error(Failure.UnExpectedError)
         }
     }
