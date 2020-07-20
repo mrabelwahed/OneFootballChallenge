@@ -40,7 +40,7 @@ code challenge to you.
 
 :rocket: Have fun!
 
-##My Solution
+## My Solution
 - please check the solution here [branch task/refactor]
 
 - I used clean architecture from Uncle Bob 
